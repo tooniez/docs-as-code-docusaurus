@@ -8,10 +8,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://tooniez.github.io/docs-as-code-docusaurus/',
+  url: 'https://tooniez.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docusaurus-as-code',
   projectName: 'tooniez.github.io',
   organizationName: 'tooniez',
   trailingSlash: false,
