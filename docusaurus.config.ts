@@ -54,6 +54,9 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    [
+      'mermaid',
+    ],
   ],
 
   themeConfig: {
