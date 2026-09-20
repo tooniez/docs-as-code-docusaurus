@@ -74,6 +74,84 @@ function HelloDocusaurus() {
   return <h1>Hello, Docusaurus!</h1>;
 }
 ```
+## Mermaid Diagrams
+
+Docusaurus supports [Mermaid](https://mermaid-js.github.io/mermaid/) diagrams rendered in fenced code blocks with the `mermaid` language identifier.
+
+Enable Mermaid functionality by adding the `@docusaurus/theme-mermaid` plugin and setting `markdown.mermaid: true` in `docusaurus.config.js`.
+
+````bash
+npm install --save @docusaurus/theme-mermaid
+````
+
+### Basic Examples
+
+#### Graph TD (Top-to-Bottom Flowchart)
+
+````mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+````
+
+#### Graph LR (Left-to-Right Flowchart)
+
+````mermaid
+graph LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+````
+
+#### Sequence Diagram
+
+````mermaid
+sequenceDiagram
+    participant A
+    participant B
+    participant C
+    A->>B: Hello!
+    B->>A: Hi there!
+````
+
+### Advanced Layout Engines
+
+Docusaurus supports different Mermaid layout engines:
+
+*   **`dagre`** — default, suitable for most flowcharts and graphs
+*   **`elk`** — heavier layout engine for complex diagrams; install `@mermaid-js/layout-elk` for use
+
+````mermaid
+---
+config:
+  layout: elk
+---
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+````
+
+### Dark/Light Theming
+
+Diagram themes can be customized via `themeConfig` in `docusaurus.config.js`:
+
+````js
+export default {
+  themeConfig: {
+    mermaid: {
+      theme: {
+        light: 'neutral',
+        dark: 'forest',
+      },
+    },
+  },
+};
+````
 
 ## Admonitions
 
